@@ -1,0 +1,187 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <artifactId>base</artifactId>
+    <groupId>org.sakaiproject.nakamura</groupId>
+    <version>0.11-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>uk.ac.cam.caret.nakamura</groupId>
+  <artifactId>uk.ac.cam.caret.nakamura</artifactId>
+  <name>UCAM Nakamura Instance</name>
+  <version>1.0.0</version>
+  <packaging>jar</packaging>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.sling</groupId>
+        <artifactId>maven-launchpad-plugin</artifactId>
+        <configuration>
+          <defaultBundleList>
+            <groupId>org.sakaiproject.nakamura</groupId>
+            <artifactId>org.sakaiproject.nakamura.app</artifactId>
+            <version>1.0.0</version>
+          </defaultBundleList>
+          <additionalBundles>
+            <!-- UCAM specific UX loader: -->
+            <!-- <bundle>
+              <groupId>org.sakaiproject.nakamura</groupId>
+              <artifactId>org.sakaiproject.nakamura.uxloader-cam</artifactId>
+              <version>1.0.0</version>
+              <startLevel>25</startLevel> 
+            </bundle> -->
+            <!-- UCAM front end extensions: -->
+            <!-- <bundle>
+              <groupId>uk.ac.cam.caret.oae</groupId>
+              <artifactId>uk.ac.cam.caret.oae.ucamux</artifactId>
+              <version>0.1-SNAPSHOT</version>
+              <startLevel>30</startLevel> 
+            </bundle> -->
+            <!-- UCAM back end extensions: -->
+            <!-- <bundle>
+              <groupId>uk.ac.cam.caret.oae</groupId>
+              <artifactId>uk.ac.cam.caret.oae.ucamex</artifactId>
+              <version>0.1-SNAPSHOT</version>
+              <startLevel>30</startLevel> 
+            </bundle> -->
+            <bundle>
+                <groupId>org.sakaiproject.nakamura</groupId>
+                <artifactId>org.postgres</artifactId>
+                <version>9.0-801.jdbc4-1.0-SNAPSHOT</version>
+                  <startLevel>1</startLevel> 
+            </bundle>
+            <bundle>
+              <groupId>org.sakaiproject.nakamura</groupId>
+              <artifactId>org.sakaiproject.nakamura.uxloader</artifactId>
+              <version>1.0.0</version>
+              <startLevel>25</startLevel> 
+            </bundle>
+          </additionalBundles>
+          <!-- You can exclude particular bundles here. -->
+          <bundleExclusions>
+             <!-- <bundle>
+              <groupId>org.sakaiproject.nakamura</groupId>
+              <artifactId>org.sakaiproject.nakamura.uxloader</artifactId>
+              <version>1.0.0</version>
+              <startLevel>25</startLevel> 
+             </bundle> -->
+          </bundleExclusions>
+          <!-- Needs to be copied from nakamura.app -->
+          <jarWebSupport>
+            <groupId>org.sakaiproject.nakamura</groupId>
+            <artifactId>org.sakaiproject.nakamura.jetty-config</artifactId>
+            <version>1.0.0</version>
+            <startLevel>5</startLevel>
+          </jarWebSupport>
+        </configuration>
+        <executions>
+          <execution>
+            <id>prepare-package</id>
+            <goals>
+              <goal>prepare-package</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>include-resource-modifications</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>resources</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- Needs to be copied from nakamura.app -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+            <manifest>
+              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.launchpad.base</artifactId>
+      <version>2.3.0</version>
+      <classifier>webapp</classifier>
+      <type>war</type>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.launchpad.base</artifactId>
+      <version>2.3.0</version>
+      <classifier>app</classifier>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.sakaiproject.nakamura</groupId>
+        <artifactId>org.sakaiproject.nakamura.uxloader-cam</artifactId>
+        <version>1.0.0</version>
+    </dependency>
+    <!-- <dependency>
+        <groupId>uk.ac.cam.caret.oae</groupId>
+        <artifactId>uk.ac.cam.caret.oae.ucamux</artifactId>
+        <version>0.1-SNAPSHOT</version>
+    </dependency> -->
+    <!-- <dependency>
+        <groupId>uk.ac.cam.caret.oae</groupId>
+        <artifactId>uk.ac.cam.caret.oae.ucamex</artifactId>
+        <version>0.1-SNAPSHOT</version>
+    </dependency> -->
+    <dependency>
+      <groupId>org.sakaiproject.nakamura</groupId>
+      <artifactId>org.postgres</artifactId>
+      <version>9.0-801.jdbc4-1.0-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+  <repositories>
+    <repository>
+        <id>sakai-maven2</id>
+        <name>Sakai Maven Repository</name>
+        <layout>default</layout>
+        <url>http://source.sakaiproject.org/maven2</url>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+    </repository>
+     <repository>
+        <id>caret-maven2</id>
+        <name>CARET Maven Repository</name>
+        <layout>default</layout>
+        <url>http://www2.caret.cam.ac.uk/maven2</url>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
+    </repository>
+    <repository>
+      <id>EclipseLink Repo</id>
+      <url>http://mirror.cc.columbia.edu/pub/software/eclipse/rt/eclipselink/maven.repo/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+    </repository>
+  </repositories>
+</project>
