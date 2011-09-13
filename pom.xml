@@ -127,11 +127,11 @@
       <classifier>app</classifier>
       <scope>provided</scope>
     </dependency>
-    <dependency>
+    <!-- <dependency>
         <groupId>org.sakaiproject.nakamura</groupId>
         <artifactId>org.sakaiproject.nakamura.uxloader-cam</artifactId>
         <version>1.0.0</version>
-    </dependency>
+    </dependency> -->
     <!-- <dependency>
         <groupId>uk.ac.cam.caret.oae</groupId>
         <artifactId>uk.ac.cam.caret.oae.ucamux</artifactId>
