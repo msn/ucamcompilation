@@ -9,7 +9,7 @@
   <groupId>uk.ac.cam.caret.nakamura</groupId>
   <artifactId>uk.ac.cam.caret.nakamura</artifactId>
   <name>UCAM Nakamura Instance</name>
-  <version>1.0.0</version>
+  <version>vcam_001</version>
   <packaging>jar</packaging>
   <build>
     <plugins>
