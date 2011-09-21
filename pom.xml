@@ -161,9 +161,21 @@
             <enabled>false</enabled>
         </snapshots>
     </repository>
-     <repository>
+    <repository>
         <id>caret-maven2</id>
-        <name>CARET Maven Repository</name>
+        <name>CARET Maven2 Repository</name>
+        <layout>default</layout>
+        <url>http://maven2.caret.cam.ac.uk</url>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
+    </repository>
+    <repository>
+        <id>caret-maven2-legacy</id>
+        <name>CARET Legacy Maven Repository</name>
         <layout>default</layout>
         <url>http://www2.caret.cam.ac.uk/maven2</url>
         <releases>
