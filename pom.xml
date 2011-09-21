@@ -24,12 +24,12 @@
           </defaultBundleList>
           <additionalBundles>
             <!-- UCAM specific UX loader: -->
-            <!-- <bundle>
+            <bundle>
               <groupId>org.sakaiproject.nakamura</groupId>
-              <artifactId>org.sakaiproject.nakamura.uxloader-cam</artifactId>
-              <version>1.0.0</version>
+              <artifactId>org.sakaiproject.nakamura.uxloader</artifactId>
+              <version>0.0.1.vcam_3akai-ux</version>
               <startLevel>25</startLevel> 
-            </bundle> -->
+            </bundle>
             <!-- UCAM front end extensions: -->
             <!-- <bundle>
               <groupId>uk.ac.cam.caret.oae</groupId>
@@ -59,12 +59,12 @@
           </additionalBundles>
           <!-- You can exclude particular bundles here. -->
           <bundleExclusions>
-             <!-- <bundle>
+             <bundle>
               <groupId>org.sakaiproject.nakamura</groupId>
               <artifactId>org.sakaiproject.nakamura.uxloader</artifactId>
               <version>1.0.0</version>
               <startLevel>25</startLevel> 
-             </bundle> -->
+             </bundle>
           </bundleExclusions>
           <!-- Needs to be copied from nakamura.app -->
           <jarWebSupport>
