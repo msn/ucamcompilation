@@ -9,7 +9,7 @@
   <groupId>uk.ac.cam.caret.nakamura</groupId>
   <artifactId>uk.ac.cam.caret.nakamura</artifactId>
   <name>UCAM Nakamura Instance</name>
-  <version>vcam_001</version>
+  <version>0.0.1.vcam</version>
   <packaging>jar</packaging>
   <build>
     <plugins>
@@ -20,7 +20,7 @@
           <defaultBundleList>
             <groupId>org.sakaiproject.nakamura</groupId>
             <artifactId>org.sakaiproject.nakamura.app</artifactId>
-            <version>1.0.0</version>
+            <version>0.0.1.vcam_nakamura</version>
           </defaultBundleList>
           <additionalBundles>
             <!-- UCAM specific UX loader: -->
