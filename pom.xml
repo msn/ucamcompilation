@@ -47,13 +47,13 @@
             <bundle>
                 <groupId>org.sakaiproject.nakamura</groupId>
                 <artifactId>org.postgres</artifactId>
-                <version>9.0-801.jdbc4-1.0-SNAPSHOT</version>
+                <version>0.0.1.vcam_postgres_bundle</version>
                   <startLevel>1</startLevel> 
             </bundle>
             <bundle>
               <groupId>org.sakaiproject.nakamura</groupId>
               <artifactId>org.sakaiproject.nakamura.uxloader</artifactId>
-              <version>1.0.0</version>
+              <version>0.0.1.vcam_3akai-ux</version>
               <startLevel>25</startLevel> 
             </bundle>
           </additionalBundles>
@@ -143,9 +143,9 @@
         <version>0.1-SNAPSHOT</version>
     </dependency> -->
     <dependency>
-      <groupId>org.sakaiproject.nakamura</groupId>
+      <groupId>org</groupId>
       <artifactId>org.postgres</artifactId>
-      <version>9.0-801.jdbc4-1.0-SNAPSHOT</version>
+      <version>0.0.1.vcam_postgres_bundle</version>
     </dependency>
   </dependencies>
   <repositories>
