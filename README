@@ -1,0 +1,24 @@
+Creating the Cambridge specific OAE jar file
+--------------------------------------------
+
+This git project is intended to make it easy to assemble the various components
+that make up the Cambridge deployment of the OAE jar:
+
+1) git clone git://github.com/caret/ucamcompilation.git
+
+2) cd ucamcompilation
+
+3) git tag
+
+4) git checkout X.Y.Z.vcam # where X.Y.Z.vcam is the tag you want to deploy
+
+5) mvn --version # check maven version, should be:
+Apache Maven 2.2.1
+
+6) mvn clean install
+
+7) cp target/uk.ac.cam.caret.nakamura-X.Y.Z.vcam.jar run
+
+8) cd run
+
+9) java -jar uk.ac.cam.caret.nakamura-X.Y.Z.vcam.jar
