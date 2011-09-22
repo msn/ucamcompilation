@@ -50,21 +50,9 @@
                 <version>0.0.1.vcam_postgres_bundle</version>
                   <startLevel>1</startLevel> 
             </bundle>
-            <bundle>
-              <groupId>org.sakaiproject.nakamura</groupId>
-              <artifactId>org.sakaiproject.nakamura.uxloader</artifactId>
-              <version>0.0.2.vcam_3akai-ux</version>
-              <startLevel>25</startLevel> 
-            </bundle>
           </additionalBundles>
           <!-- You can exclude particular bundles here. -->
           <bundleExclusions>
-             <bundle>
-              <groupId>org.sakaiproject.nakamura</groupId>
-              <artifactId>org.sakaiproject.nakamura.uxloader</artifactId>
-              <version>1.0.0</version>
-              <startLevel>25</startLevel> 
-             </bundle>
           </bundleExclusions>
           <!-- Needs to be copied from nakamura.app -->
           <jarWebSupport>
