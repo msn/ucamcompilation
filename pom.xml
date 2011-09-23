@@ -9,7 +9,7 @@
   <groupId>uk.ac.cam.caret.nakamura</groupId>
   <artifactId>uk.ac.cam.caret.nakamura</artifactId>
   <name>UCAM Nakamura Instance</name>
-  <version>0.0.4.vcam</version>
+  <version>0.0.5.vcam</version>
   <packaging>jar</packaging>
   <build>
     <plugins>
@@ -31,12 +31,12 @@
               <startLevel>25</startLevel> 
             </bundle>
             <!-- UCAM front end extensions: -->
-            <!-- <bundle>
+            <bundle>
               <groupId>uk.ac.cam.caret.oae</groupId>
               <artifactId>uk.ac.cam.caret.oae.ucamux</artifactId>
-              <version>0.1-SNAPSHOT</version>
+              <version>0.0.1.vcam_ucam-ux</version>
               <startLevel>30</startLevel> 
-            </bundle> -->
+            </bundle>
             <!-- UCAM back end extensions: -->
             <!-- <bundle>
               <groupId>uk.ac.cam.caret.oae</groupId>
