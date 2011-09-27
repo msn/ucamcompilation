@@ -9,7 +9,7 @@
   <groupId>uk.ac.cam.caret.nakamura</groupId>
   <artifactId>uk.ac.cam.caret.nakamura</artifactId>
   <name>UCAM Nakamura Instance</name>
-  <version>0.0.6.vcam</version>
+  <version>0.0.7.vcam</version>
   <packaging>jar</packaging>
   <build>
     <plugins>
@@ -27,7 +27,7 @@
             <bundle>
               <groupId>org.sakaiproject.nakamura</groupId>
               <artifactId>org.sakaiproject.nakamura.uxloader</artifactId>
-              <version>0.0.4.vcam_3akai-ux</version>
+              <version>0.0.5.vcam_3akai-ux</version>
               <startLevel>25</startLevel> 
             </bundle>
             <!-- UCAM front end extensions: -->
@@ -118,7 +118,7 @@
     <dependency>
         <groupId>org.sakaiproject.nakamura</groupId>
         <artifactId>org.sakaiproject.nakamura.uxloader</artifactId>
-        <version>0.0.4.vcam_3akai-ux</version>
+        <version>0.0.5.vcam_3akai-ux</version>
     </dependency>
     <!-- <dependency>
         <groupId>uk.ac.cam.caret.oae</groupId>
