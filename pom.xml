@@ -9,7 +9,7 @@
   <groupId>uk.ac.cam.caret.nakamura</groupId>
   <artifactId>uk.ac.cam.caret.nakamura</artifactId>
   <name>UCAM Nakamura Instance</name>
-  <version>0.0.18.vcam</version>
+  <version>0.0.19.vcam</version>
   <packaging>jar</packaging>
   <build>
     <plugins>
@@ -34,16 +34,16 @@
             <bundle>
               <groupId>uk.ac.cam.caret.oae</groupId>
               <artifactId>uk.ac.cam.caret.oae.ucamux</artifactId>
-              <version>0.0.3.vcam_ucam-ux</version>
+              <version>0.0.4.vcam_ucam-ux</version>
               <startLevel>30</startLevel> 
             </bundle>
             <!-- UCAM back end extensions: -->
-            <!-- <bundle>
+            <bundle>
               <groupId>uk.ac.cam.caret.oae</groupId>
               <artifactId>uk.ac.cam.caret.oae.ucamex</artifactId>
-              <version>0.1-SNAPSHOT</version>
+              <version>0.0.1.vcam_ucamex</version>
               <startLevel>30</startLevel> 
-            </bundle> -->
+            </bundle>
             <bundle>
                 <groupId>org.sakaiproject.nakamura</groupId>
                 <artifactId>org.postgres</artifactId>
@@ -120,16 +120,16 @@
         <artifactId>org.sakaiproject.nakamura.uxloader</artifactId>
         <version>0.0.14.vcam_3akai-ux</version>
     </dependency>
-    <!-- <dependency>
+    <dependency>
         <groupId>uk.ac.cam.caret.oae</groupId>
-        <artifactId>uk.ac.cam.caret.oae.ucamux</artifactId>
-        <version>0.1-SNAPSHOT</version>
-    </dependency> -->
-    <!-- <dependency>
+        <artifactId>uk.ac.cam.caret.oae.ucam-ux</artifactId>
+        <version>0.0.4.vcam_ucam-ux</version>
+    </dependency>
+    <dependency>
         <groupId>uk.ac.cam.caret.oae</groupId>
         <artifactId>uk.ac.cam.caret.oae.ucamex</artifactId>
-        <version>0.1-SNAPSHOT</version>
-    </dependency> -->
+        <version>0.0.1.vcam_ucamex</version>
+    </dependency>
     <dependency>
       <groupId>org</groupId>
       <artifactId>org.postgres</artifactId>
