@@ -33,7 +33,7 @@
             <!-- UCAM front end extensions: -->
             <bundle>
               <groupId>uk.ac.cam.caret.oae</groupId>
-              <artifactId>uk.ac.cam.caret.oae.ucamux</artifactId>
+              <artifactId>uk.ac.cam.caret.oae.ucam-ux</artifactId>
               <version>0.0.5.vcam_ucam-ux</version>
               <startLevel>30</startLevel> 
             </bundle>
